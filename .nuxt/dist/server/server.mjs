@@ -1983,17 +1983,26 @@ __vite_ssr_exports__.default = [
 // - /@id/__x00__virtual:/home/feoche/dev/feoche/toolbox/.nuxt/routes.mjs ($id_bb817e87)
 // Dependencies: 
 // - /assets/css/tailwind.css ($id_f75548e1)
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_5dd70240 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/assets/css/tailwind.css");
+
 
 const _sfc_main = {
   methods: {
     filter(arr) {
-      return arr.filter((card) => card.title.includes(this.text) || card.content.includes(this.text) || card.keywords && card.keywords.some((keyword) => keyword.includes(this.text)));
+      return arr.filter(card =>
+        card.title.includes(this.text) ||
+        card.content.includes(this.text) ||
+        (card.keywords && card.keywords.some(keyword => keyword.includes(this.text)))
+      );
+    },
+    filterByKeyword(keyword) {
+      this.text = keyword;
     }
   },
   data: () => ({
@@ -2002,91 +2011,118 @@ const _sfc_main = {
       {
         href: "https://omatsuri.app/triangle-generator",
         title: "Triangle generator",
-        content: "Generate css triangles styles for elements and pseudo-elements"
+        content: "Generate css triangles styles for elements and pseudo-elements",
+        keywords: ["triangle", "css"]
       },
       {
         href: "https://omatsuri.app/color-shades-generator",
         title: "Color shades generator",
-        content: "Generate tints and shades of a given color"
+        content: "Generate tints and shades of a given color",
+        keywords: ["color", "shades"]
       },
       {
         href: "https://omatsuri.app/gradient-generator",
         title: "Gradient generator",
-        content: "Generate linear and radial css gradients"
+        content: "Generate linear and radial css gradients",
+        keywords: ["color", "gradient", "css"]
       },
       {
         href: "https://omatsuri.app/page-dividers",
         title: "Page dividers",
-        content: "Tool to generate page dividers with css and svg images"
+        content: "Tool to generate page dividers with css and svg images",
+        keywords: ["page", "dividers", "css", "svg"]
       },
       {
         href: "https://omatsuri.app/svg-compressor",
         title: "SVG compressor",
-        content: "Compress SVG images with SVGO tool, convert to react component immediately after if needed"
+        content: "Compress SVG images with SVGO tool, convert to react component immediately after if needed",
+        keywords: ["svg", "compress", "react"]
       },
       {
         href: "https://omatsuri.app/svg-to-jsx",
-        title: "SVG \u2192 JSX Convert",
-        content: "SVG icons and illustrations to react components (or components for other libraries with JSX support)"
+        title: "SVG → JSX Convert",
+        content: "SVG icons and illustrations to react components (or components for other libraries with JSX support)",
+        keywords: ["svg", "react", "jsx"]
       },
       {
         href: "https://omatsuri.app/b64-encoding",
         title: "Base64 encoding",
-        content: "Convert images or files to base64, generate styles to use as background image"
+        content: "Convert images or files to base64, generate styles to use as background image",
+        keywords: ["base64", "image", "css"]
       },
       {
         href: "https://omatsuri.app/fake-data-generator",
         title: "Fake data generator",
-        content: "Generate wide variety of realistic fake data: address, avatars, names, phones..."
+        content: "Generate wide variety of realistic fake data: address, avatars, names, phones...",
+        keywords: ["data"]
       },
       {
         href: "https://omatsuri.app/html-symbols",
         title: "Symbols collection",
-        content: "Collection of commonly used html symbols: arrows, marks, currency signs and many others"
+        content: "Collection of commonly used html symbols: arrows, marks, currency signs and many others",
+        keywords: ["symbols", "html"]
       },
       {
         href: "https://omatsuri.app/lorem-ipsum",
         title: "Lorem ipsum",
-        content: "Generate different kinds of lorem ipsum text"
+        content: "Generate different kinds of lorem ipsum text",
+        keywords: ["lorem", "ipsum", "text"]
       },
       {
         href: "https://omatsuri.app/css-cursors",
         title: "CSS cursors",
-        content: "All existing CSS cursor property values collection"
+        content: "All existing CSS cursor property values collection",
+        keywords: ["cursor", "css"]
       },
       {
         href: "https://omatsuri.app/events-keycode",
         title: "Keyboard events codes",
-        content: "JavaScript events keycode values"
+        content: "JavaScript events keycode values",
+        keywords: ["keycode", "event"]
       }
     ]
   })
-};
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+}
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<span${__vite_ssr_import_1__.ssrRenderAttrs(_attrs)}><input${__vite_ssr_import_1__.ssrRenderAttr("value", _ctx.text)} class="w-full m-5 p-2"><span class="card-container grid grid-cols-5 grid-flow-row mx-5"><!--[-->`);
-  __vite_ssr_import_1__.ssrRenderList($options.filter(_ctx.cards), (card) => {
-    _push(`<a class="card link" href="{{card.href}}"><span class="block">${__vite_ssr_import_1__.ssrInterpolate(card.title)}</span><span class="block">${__vite_ssr_import_1__.ssrInterpolate(card.content)}</span><span class="card-footer"><!--[-->`);
-    __vite_ssr_import_1__.ssrRenderList(card.keywords, (keyword) => {
-      _push(`<span class="keyword">${__vite_ssr_import_1__.ssrInterpolate(keyword)}</span>`);
-    });
-    _push(`<!--]--></span></a>`);
-  });
-  _push(`<!--]--></span></span>`);
+  _push(`<span${
+    __vite_ssr_import_2__.ssrRenderAttrs(__vite_ssr_import_1__.mergeProps({ class: "block w-screen" }, _attrs))
+  }><input${
+    __vite_ssr_import_2__.ssrRenderAttr("value", _ctx.text)
+  } class="w-full m-5 p-2 box-border border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"><span class="card-container grid grid-cols-5 grid-flow-row gap-3 mx-5"><!--[-->`)
+  __vite_ssr_import_2__.ssrRenderList($options.filter(_ctx.cards), (card) => {
+    _push(`<a class="card link px-5 py-3 border rounded-lg hover:bg-gray-100 hover:text-gray-900 hover:border-gray-300 cursor-pointer flex flex-col justify-start items-center text-center gap-2"${
+      __vite_ssr_import_2__.ssrRenderAttr("href", card.href)
+    }><span class="block text-lg font-bold">${
+      card.title
+    }</span><span class="block text-sm text-justify text-gray-700">${
+      card.content
+    }</span><span class="card-footer"><!--[-->`)
+    __vite_ssr_import_2__.ssrRenderList(card.keywords, (keyword) => {
+      _push(`<span class="keyword inline-block bg-gray-200 text-gray-700 px-2 py-1 rounded-full mr-1 text-xs font-semibold cursor-pointer hover:bg-gray-400">${keyword}</span>`)
+    })
+    _push(`<!--]--></span></a>`)
+  })
+  _push(`<!--]--></span></span>`)
 }
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_setup = _sfc_main.setup;
+
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_2__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = new Set())).add("pages/index.vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
-};
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+  const ssrContext = __vite_ssr_import_3__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/index.vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_3__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/feoche/dev/feoche/toolbox/pages/index.vue"]]);
-
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/feoche/dev/feoche/toolbox/pages/index.vue"]])
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
 }
@@ -2147,18 +2183,27 @@ __vite_ssr_exports__.default = (sfc, props) => {
 // - /@id/__x00__virtual:/home/feoche/dev/feoche/toolbox/.nuxt/routes.mjs ($id_bb817e87)
 // Dependencies: 
 // - /assets/css/tailwind.css ($id_f75548e1)
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_cca58e97 = async function (global, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 
+
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/assets/css/tailwind.css");
+
 
 const _sfc_main = {
   methods: {
     filter(arr) {
-      return arr.filter((card) => card.title.includes(this.text) || card.content.includes(this.text) || card.keywords && card.keywords.some((keyword) => keyword.includes(this.text)));
+      return arr.filter(card =>
+        card.title.includes(this.text) ||
+        card.content.includes(this.text) ||
+        (card.keywords && card.keywords.some(keyword => keyword.includes(this.text)))
+      );
+    },
+    filterByKeyword(keyword) {
+      this.text = keyword;
     }
   },
   data: () => ({
@@ -2167,91 +2212,118 @@ const _sfc_main = {
       {
         href: "https://omatsuri.app/triangle-generator",
         title: "Triangle generator",
-        content: "Generate css triangles styles for elements and pseudo-elements"
+        content: "Generate css triangles styles for elements and pseudo-elements",
+        keywords: ["triangle", "css"]
       },
       {
         href: "https://omatsuri.app/color-shades-generator",
         title: "Color shades generator",
-        content: "Generate tints and shades of a given color"
+        content: "Generate tints and shades of a given color",
+        keywords: ["color", "shades"]
       },
       {
         href: "https://omatsuri.app/gradient-generator",
         title: "Gradient generator",
-        content: "Generate linear and radial css gradients"
+        content: "Generate linear and radial css gradients",
+        keywords: ["color", "gradient", "css"]
       },
       {
         href: "https://omatsuri.app/page-dividers",
         title: "Page dividers",
-        content: "Tool to generate page dividers with css and svg images"
+        content: "Tool to generate page dividers with css and svg images",
+        keywords: ["page", "dividers", "css", "svg"]
       },
       {
         href: "https://omatsuri.app/svg-compressor",
         title: "SVG compressor",
-        content: "Compress SVG images with SVGO tool, convert to react component immediately after if needed"
+        content: "Compress SVG images with SVGO tool, convert to react component immediately after if needed",
+        keywords: ["svg", "compress", "react"]
       },
       {
         href: "https://omatsuri.app/svg-to-jsx",
-        title: "SVG \u2192 JSX Convert",
-        content: "SVG icons and illustrations to react components (or components for other libraries with JSX support)"
+        title: "SVG → JSX Convert",
+        content: "SVG icons and illustrations to react components (or components for other libraries with JSX support)",
+        keywords: ["svg", "react", "jsx"]
       },
       {
         href: "https://omatsuri.app/b64-encoding",
         title: "Base64 encoding",
-        content: "Convert images or files to base64, generate styles to use as background image"
+        content: "Convert images or files to base64, generate styles to use as background image",
+        keywords: ["base64", "image", "css"]
       },
       {
         href: "https://omatsuri.app/fake-data-generator",
         title: "Fake data generator",
-        content: "Generate wide variety of realistic fake data: address, avatars, names, phones..."
+        content: "Generate wide variety of realistic fake data: address, avatars, names, phones...",
+        keywords: ["data"]
       },
       {
         href: "https://omatsuri.app/html-symbols",
         title: "Symbols collection",
-        content: "Collection of commonly used html symbols: arrows, marks, currency signs and many others"
+        content: "Collection of commonly used html symbols: arrows, marks, currency signs and many others",
+        keywords: ["symbols", "html"]
       },
       {
         href: "https://omatsuri.app/lorem-ipsum",
         title: "Lorem ipsum",
-        content: "Generate different kinds of lorem ipsum text"
+        content: "Generate different kinds of lorem ipsum text",
+        keywords: ["lorem", "ipsum", "text"]
       },
       {
         href: "https://omatsuri.app/css-cursors",
         title: "CSS cursors",
-        content: "All existing CSS cursor property values collection"
+        content: "All existing CSS cursor property values collection",
+        keywords: ["cursor", "css"]
       },
       {
         href: "https://omatsuri.app/events-keycode",
         title: "Keyboard events codes",
-        content: "JavaScript events keycode values"
+        content: "JavaScript events keycode values",
+        keywords: ["keycode", "event"]
       }
     ]
   })
-};
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+}
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<span${__vite_ssr_import_1__.ssrRenderAttrs(_attrs)}><input${__vite_ssr_import_1__.ssrRenderAttr("value", _ctx.text)} class="w-full m-5 p-2"><span class="card-container grid grid-cols-5 grid-flow-row mx-5"><!--[-->`);
-  __vite_ssr_import_1__.ssrRenderList($options.filter(_ctx.cards), (card) => {
-    _push(`<a class="card link" href="{{card.href}}"><span class="block">${__vite_ssr_import_1__.ssrInterpolate(card.title)}</span><span class="block">${__vite_ssr_import_1__.ssrInterpolate(card.content)}</span><span class="card-footer"><!--[-->`);
-    __vite_ssr_import_1__.ssrRenderList(card.keywords, (keyword) => {
-      _push(`<span class="keyword">${__vite_ssr_import_1__.ssrInterpolate(keyword)}</span>`);
-    });
-    _push(`<!--]--></span></a>`);
-  });
-  _push(`<!--]--></span></span>`);
+  _push(`<span${
+    __vite_ssr_import_2__.ssrRenderAttrs(__vite_ssr_import_1__.mergeProps({ class: "block w-screen" }, _attrs))
+  }><input${
+    __vite_ssr_import_2__.ssrRenderAttr("value", _ctx.text)
+  } class="w-full m-5 p-2 box-border border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"><span class="card-container grid grid-cols-5 grid-flow-row gap-3 mx-5"><!--[-->`)
+  __vite_ssr_import_2__.ssrRenderList($options.filter(_ctx.cards), (card) => {
+    _push(`<a class="card link px-5 py-3 border rounded-lg hover:bg-gray-100 hover:text-gray-900 hover:border-gray-300 cursor-pointer flex flex-col justify-start items-center text-center gap-2"${
+      __vite_ssr_import_2__.ssrRenderAttr("href", card.href)
+    }><span class="block text-lg font-bold">${
+      card.title
+    }</span><span class="block text-sm text-justify text-gray-700">${
+      card.content
+    }</span><span class="card-footer"><!--[-->`)
+    __vite_ssr_import_2__.ssrRenderList(card.keywords, (keyword) => {
+      _push(`<span class="keyword inline-block bg-gray-200 text-gray-700 px-2 py-1 rounded-full mr-1 text-xs font-semibold cursor-pointer hover:bg-gray-400">${keyword}</span>`)
+    })
+    _push(`<!--]--></span></a>`)
+  })
+  _push(`<!--]--></span></span>`)
 }
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_setup = _sfc_main.setup;
+
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_2__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = new Set())).add("pages/index.vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
-};
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+  const ssrContext = __vite_ssr_import_3__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/index.vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_3__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/feoche/dev/feoche/toolbox/pages/index.vue"]]);
-;
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/feoche/dev/feoche/toolbox/pages/index.vue"]]);
 }
 
 
