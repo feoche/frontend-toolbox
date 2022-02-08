@@ -1,0 +1,24 @@
+{
+  "name": "frontend-toolbox",
+  "version": "0.0.1",
+  "description": "A complete list of tools for front end development",
+  "keywords": [
+    "frontend",
+    "toolbox",
+    "toolbox-frontend"
+  ],
+  "author": "feoche <francoiseoche@gmail.com>",
+  "license": "MIT",
+  "homepage": "feoche.github.io/frontend-toolbox",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "nuxt3": "latest",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.19"
+  }
+}
