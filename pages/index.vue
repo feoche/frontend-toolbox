@@ -113,7 +113,145 @@ export default {
         title: "Keyboard events codes",
         content: "JavaScript events keycode values",
         keywords: ["keycode", "event"]
-      }
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Wordmark",
+        title: "Wordmark",
+        content: "Helps you choose fonts for your crafting projects.",
+        keywords: ["font"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/color-converter",
+        title: "Color Converter",
+        content: "Convert your colors to different CSS units by simply pasting your color. RGB to HEX, HEX to RGB, HEX to HSL and many more !",
+        keywords: ["color", "converter", "css", "hex", "rgb", "hsl"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/CSS%20Gradient%20Generator",
+        title: "CSS Gradient Generator",
+        content: "CSS gradient generator tool that lets you create colorful background gradients.",
+        keywords: ["gradient", "css"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Squoosh",
+        title: "Squoosh",
+        content: "Compress and compare images with different codecs, right in your browser.",
+        keywords: ["image", "img", "jpg", "png", "gif", "svg"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Devhints",
+        title: "Devhints",
+        content: "A collection of web development cheatsheets.",
+        keywords: ["cheatsheet", "web", "development"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Type%20Scale",
+        title: "Type Scale",
+        content: "Preview and choose the right type scale for your project. Experiment with font size, scale and different webfonts.",
+        keywords: ["scale", "font", "webfont"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/CSS%20Grid%20Generator",
+        title: "CSS Grid Generator",
+        content: "Learn CSS Grid visually and build web layouts with this interactive CSS Grid Generator.",
+        keywords: ["grid", "css", "layout"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/js-converter",
+        title: "JS/TS Converter",
+        content: "Minify or beautify your JavaScript or TypeScript code and easily copy the transformed output.",
+        keywords: ["js", "ts", "javascript", "typescript", "beautify", "minify"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/css-converter",
+        title: "CSS Converter",
+        content: "Minify CSS or beautify/format CSS and easily copy the transformed output.",
+        keywords: ["css", "beautify", "minify"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/css-svg-symbols",
+        title: "CSS & SVG Symbols",
+        content: "Collection of SVG/CSS icons and symbols, easy to copy and paste as SVG or CSS.",
+        keywords: ["svg", "css", "symbol", "icon"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/package-size",
+        title: "Npm Package Size",
+        content: "Get size information about your npm dependancies. To determine the dependancy size the awesome bundlephobia service is used.",
+        keywords: ["npm", "dependancy", "node"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/image-converter",
+        title: "Image Converter",
+        content: "Compress your images (jpg, png, webp, gif) easily in the browser and compare the outcome with the original image.",
+        keywords: ["image", "img", "jpg", "png", "gif", "webp"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/base64-converter",
+        title: "Base64 Converter",
+        content: "Decode Base64 or encode Base64 strings and easily copy the transformed output.",
+        keywords: ["base64", "encode", "decode"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/css-triangle",
+        title: "CSS Triangle Generator",
+        content: "Generate CSS triangles in different directions, sizes and colors. Preview your selection and easily copy paster the CSS code.",
+        keywords: ["triangle", "css"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/json-converter",
+        title: "JSON Converter",
+        content: "Use the JSON Converter to minify or beautify your JSON. It can also generate TypeScript interfaces based on the JSON input.",
+        keywords: ["json", "beautify", "minify", "typescript"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/regex-tester",
+        title: "Regex Tester",
+        content: "Regular Expression tester with syntax highlighting for Javascript.",
+        keywords: ["json", "beautify", "minify", "typescript"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/CSS%20Background%20Patterns",
+        title: "CSS Background Patterns",
+        content: "Beautiful pure CSS background patterns that you can actually use in your projects!",
+        keywords: ["css", "pattern", "background"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Blobs%20Generator",
+        title: "Blobs Generator",
+        content: "Organic blobs for websites and UI designs!",
+        keywords: ["image", "img", "jpg", "png", "svg", "css"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Heroicons",
+        title: "Heroicons",
+        content: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.",
+        keywords: ["svg", "css", "icon"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Mockaroo",
+        title: "Mockaroo",
+        content: "A free test data generator and API mocking tool.",
+        keywords: ["mock", "data", "api"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/CSS%20Easing%20Cheatsheet",
+        title: "CSS Easing Cheatsheet",
+        content: "Make animations more realistic by picking the right easing function.",
+        keywords: ["css", "easing"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Favicon%20Generator",
+        title: "Favicon Generator",
+        content: "Quickly generate your favicon from text, image, or choose from hundreds of emojis.",
+        keywords: ["favicon", "icon"]
+      },
+      {
+        href: "https://www.fetoolkit.io/widget/Mockup%20Generator",
+        title: "Mockup Generator",
+        content: "Create beautiful product mockups in just a few clicks.",
+        keywords: ["ui", "image", "img", "mock"]
+      },
     ]
   })
 }
