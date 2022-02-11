@@ -145,7 +145,7 @@ server.listen(listenAddress, () => {
   });
 });
 
-const STATIC_ASSETS_BASE = "/_nuxt/home/feoche/dev/feoche/toolbox/dist" + "/" + "1644410266";
+const STATIC_ASSETS_BASE = "/_nuxt/home/feoche/dev/feoche/toolbox/dist" + "/" + "1645019466";
 const PAYLOAD_JS = "/payload.js";
 const getClientManifest = cachedImport(() => import('/home/feoche/dev/feoche/toolbox/.nuxt/dist/server/client.manifest.mjs'));
 const getSSRApp = cachedImport(() => import('/home/feoche/dev/feoche/toolbox/.nuxt/dist/server/server.mjs'));
